@@ -14,8 +14,6 @@ static void repl() {
 }
 
 int main() {
-    printf("Bem-vindo ao interpretador de máquina baseada em pilha.\n");
-    printf("Comandos disponíveis: push <valor>, add, sub, mul, div, print, exit\n");
     repl();
     return 0;
 }
