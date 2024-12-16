@@ -17,3 +17,4 @@ Este é um projeto modular de um interpretador baseado em pilha, escrito em C. E
 
 ## Como Compilar e Executar
 1. Organize o projeto nas seguintes pastas:
+project/ ├── include/ │ ├── interpret.h │ └── stack.h ├── src/ │ ├── interpret.c │ ├── stack.c │ └── main.c └── README.md
