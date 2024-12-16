@@ -1,23 +1,19 @@
-# Stack Machine Interpreter
+# Interpretador de Pilha
 
-Este projeto implementa um interpretador baseado em pilha. Os comandos suportados incluem:
-
-- `push <valor>`: Empilha um valor na pilha.
-- `add`: Soma os dois últimos valores na pilha.
-- `sub`: Subtrai os dois últimos valores na pilha.
-- `mul`: Multiplica os dois últimos valores na pilha.
-- `div`: Divide os dois últimos valores na pilha.
-- `print`: Imprime o conteúdo da pilha.
-- `exit`: Sai do programa.
+## Descrição
+Este é um projeto modular de um interpretador baseado em pilha, escrito em C. Ele inclui um interpretador REPL (Read-Eval-Print Loop) e manipulação de pilhas.
 
 ## Estrutura do Projeto
+- **include/**: Contém os arquivos de cabeçalho (`interpret.h`, `stack.h`).
+- **src/**: Contém os arquivos de implementação (`interpret.c`, `stack.c`, `main.c`).
 
-- `include/`: Contém os arquivos de cabeçalho.
-- `src/`: Contém a implementação em C.
+## Funcionalidades
+- Interpretar comandos para manipular pilhas.
+- Comandos suportados:
+  - `empilha <valor>`: Empilha um valor inteiro.
+  - `desempilha`: Remove o topo da pilha.
+  - `exibe`: Exibe o conteúdo da pilha.
+  - `exit`: Sai do REPL.
 
-## Compilação
-
-Use o comando abaixo para compilar:
-
-```bash
-gcc src/*.c -Iinclude -o stack_machine
+## Como Compilar e Executar
+1. Organize o projeto nas seguintes pastas:
