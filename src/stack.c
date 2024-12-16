@@ -2,34 +2,35 @@
 #include <stdlib.h>
 #include "stack.h"
 
-typedef struct stack {
-    int* data;
-    int size;
+struct stack {
+    int *data;
     int top;
-} Stack;
+    int size;
+};
 
 Stack* new_stack(int size) {
-    Stack* s = (Stack*)malloc(sizeof(Stack));
-    s->data = (int*)malloc(size * sizeof(int));
-    s->size = size;
+    Stack* s = malloc(sizeof(Stack));
+    s->data = malloc(size * sizeof(int));
     s->top = 0;
+    s->size = size;
     return s;
 }
 
 void stack_push(Stack* s, int value) {
-    if (s->top >= s->size) {
-        printf("Erro: Pilha cheia!\n");
-        return;
+    if (s->top < s->size) {
+        s->data[s->top++] = value;
+    } else {
+        printf("Pilha cheia!\n");
     }
-    s->data[s->top++] = value;
 }
 
 int stack_pop(Stack* s) {
-    if (s->top == 0) {
-        printf("Erro: Pilha vazia!\n");
-        exit(EXIT_FAILURE);
+    if (s->top > 0) {
+        return s->data[--s->top];
+    } else {
+        printf("Pilha vazia!\n");
+        return -1;
     }
-    return s->data[--s->top];
 }
 
 void stack_print(Stack* s) {
@@ -39,3 +40,4 @@ void stack_print(Stack* s) {
     }
     printf("\n");
 }
+
